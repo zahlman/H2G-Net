@@ -111,7 +111,7 @@ def main():
     if skip_tissue_flag:
         new_names = new_names[1:]
 
-    col_new_names = ["\textbf{\rot{\multicolumn{1}{r}{" + n + "}}}" for n in new_names]
+    col_new_names = [r"\textbf{\rot{\multicolumn{1}{r}{" + n + "}}}" for n in new_names]
 
     out_pd = pd.DataFrame(data=all_pvalues, index=new_names[:-1], columns=col_new_names[1:])
 
